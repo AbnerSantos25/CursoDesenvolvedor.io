@@ -13,7 +13,7 @@ namespace Application
         private static void AulaHeranca()
         {
             var pessoaFisica = new Cadastro.pessoaFisica();
-            pessoaFisica.
+            pessoaFisica.id = 1;
         }
 
         private static void AulaClasses()

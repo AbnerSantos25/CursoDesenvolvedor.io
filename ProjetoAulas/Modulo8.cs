@@ -47,7 +47,7 @@ namespace Cadastro
             Console.write("Codigo: " + Endereco);
             Console.write("Codigo: " + Cidade);
             Console.write("Codigo: " + Cep);
-
+            
         }
     }
 
