@@ -1,40 +1,32 @@
-﻿
-// Console.WriteLine("teste");
-// const string constante = "Constante 1";
-// Console.WriteLine(constante);
+﻿using System;
 
-// int numero1 = 1;
-// Console.WriteLine(numero1);
-
-// double numero2 = 2;
-// Console.WriteLine(numero2);
-
-// float numero3 = 3;
-// Console.WriteLine(numero3);
-
-// decimal numero4 = 4;
-// Console.WriteLine(numero4);
-
-// bool VF = true;
-// Console.WriteLine(VF);
-
-var nome = NomeCompleto();
-EscreverNome();
-
-void EscreverNome()
+namespace Application
 {
-    var nome = NomeCompleto();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //AulaClasses();
 
-    Console.WriteLine(nome);
+        }
+
+        private static void AulaHeranca()
+        {
+            var pessoaFisica = new Cadastro.pessoaFisica();
+            pessoaFisica.
+        }
+
+        private static void AulaClasses()
+        {
+            var resultado = Cadastro.Calculos.SomarNumeros(2,3);
+            Console.WriteLine(resultado);
+
+            // var produto = new Cadastro.Produto();
+            // produto.Descricao = "teclado";
+
+            // produto.SetId(1);
+            // produto.ImprimirDescricao();
+        }
+
+    }
 }
-
-string NomeCompleto()
-{
-    string primeiroNome = "Rafael";
-    string segundoNome = "Almeida";
-    return primeiroNome + " " + segundoNome;
-}
-
-
-
-
