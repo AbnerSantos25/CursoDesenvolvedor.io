@@ -7,13 +7,19 @@ namespace Application
         public static void Main(string[] args)
         {
             //AulaClasses();
-
+            AulaHeranca();
         }
 
         private static void AulaHeranca()
         {
-            var pessoaFisica = new Cadastro.pessoaFisica();
-            pessoaFisica.id = 1;
+            var pessoaFisica = new Cadastro.PessoaFisica();
+            pessoaFisica.id= 1;
+            pessoaFisica.Endereco = "Endereco Teste";
+            pessoaFisica.Cidade = "Cidade teste";
+            pessoaFisica.Cep = "2233131";
+
+            pessoaFisica.ImprimirDados();
+            pessoaFisica.ImprimirCPF();
         }
 
         private static void AulaClasses()

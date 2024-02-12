@@ -36,24 +36,26 @@ namespace Cadastro
 
     public class Pessoa
     {
-        public int Id {get; set;}
+        public int id {get; set;}
         public string Endereco {get; set;}
         public string Cidade {get; set;}
         public string Cep {get; set;}
 
         public void ImprimirDados()
         {
-            Console.write("Codigo: " + Id);
-            Console.write("Codigo: " + Endereco);
-            Console.write("Codigo: " + Cidade);
-            Console.write("Codigo: " + Cep);
-            
+            Console.WriteLine("Codigo: " + id);
+            Console.WriteLine("Codigo: " + Endereco);
+            Console.WriteLine("Codigo: " + Cidade);
+            Console.WriteLine("Codigo: " + Cep);
         }
     }
 
     public class PessoaFisica : Pessoa
     {
         public string CPF {get; set;}
-
+        public void ImprimirCPF()
+        {
+            Console.WriteLine("CPF: " + CPF);
+        }
     }
 }
