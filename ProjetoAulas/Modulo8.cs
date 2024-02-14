@@ -58,4 +58,51 @@ namespace Cadastro
             Console.WriteLine("CPF: " + CPF);
         }
     }
+
+    public class funcionario : PessoaFisica
+    {
+        public string Matricula {get; set;}
+    }
+
+    public abstract class Animal
+    {
+        public string Nome {get; set;}
+        
+        public abstract string GetInformacoes();
+
+        public void ImprimirDados()
+        {
+            Console.WriteLine("Nome animal:" + Nome);
+            Console.WriteLine("Informacoes:" + GetInformacoes());
+        }
+    }
+
+    public class Cachorro : Animal
+    {
+        public override string GetInformacoes()
+        {
+            return "Cachorro é um bom amigo do homem";
+        }
+    }
+
+    public record Curso(int Id, string Descricao)
+    {
+        
+
+
+        // public int Id { get; set; }
+        // public string Descricao { get; set; }
+
+        // public override bool Equals(object obj)
+        // {
+        //     if (obj is null) return false;
+
+        //     if (obj is Curso curso)
+        //     {
+        //         return Id == curso.Id && Descricao == curso.Descricao;
+        //     }
+        //     return base.Equals(obj);
+        // }
+    }
+
 }
