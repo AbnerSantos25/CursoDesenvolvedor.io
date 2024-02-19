@@ -77,4 +77,10 @@ namespace Cadastro
             Console.WriteLine("Matricula: " + Matricula);
         }
     }
+
+    //Classes Seladas(Sealed).
+    public sealed class Configuracao
+    {
+        public string Host {get; set;}
+    }
 }

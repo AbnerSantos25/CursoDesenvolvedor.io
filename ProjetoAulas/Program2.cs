@@ -62,5 +62,21 @@ namespace Application
             Funcionario.ImprimirCpf();
             Funcionario.ImprimirMatricula();
         }   
+
+        //Criando um metodo para a classe Configuracao
+        private static void ClasseSelada()
+        {
+            //Ha dois metodos para atribuir valores a variavel Host
+            //Primeira forma
+                // --> var configuracao = new Cadastro.Configuracao();
+                // --> configuracao.Host = "localhost";
+            //Segunda forma
+                var configuracao2 = new Cadastro.Configuracao()
+                {
+                    Host = "localhost"
+                };
+                
+            Console.WriteLine("Host: " + configuracao2.Host);
+        }
     }
 }
