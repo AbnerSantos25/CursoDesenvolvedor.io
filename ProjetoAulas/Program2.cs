@@ -7,21 +7,60 @@ namespace Application
     {
         static void Main(string[] args)
         {
-            var produto1 = new Cadastro.Produto();
-
+            // Console.WriteLine("Cadastro de Produtos, Digite o nome do Produto: ");
+            // var NomeProduto = Console.ReadLine();
+            // var produto = new Cadastro.Produto();
+            // produto.Nome = NomeProduto;
+ 
             //Lendo o id do produto fornecido pelo usuario.
-            Console.Write("Digite o id do produto: ");
-            int id = int.Parse(Console.ReadLine());
+            // Console.Write("Digite o id do produto: ");
+            // int id = int.Parse(Console.ReadLine());
             /*Aqui estamos setando o id do produto1 atraves do metodo SetId, 
             porque a variavel id é privada*/
-            produto1.SetId(id);
+            // produto.SetId(id);
 
             //Gravando a descrição do produto fornecida pelo usuario.
-            Console.Write("Digite a Descrição do produto: ");
-            produto1.Descricao = Console.ReadLine();
+            // Console.Write("Digite a Descrição do produto: ");
+            // produto.Descricao = Console.ReadLine();
 
-            Console.Clear();
-            produto1.ImprimirInformacao();
+            // Console.Clear();
+            // produto.ImprimirInformacao();
+            // QuantidadeEmEstoque();
+
+            //Aqui vamos chamar o metodo Heranca
+            Console.WriteLine("=======================================================================");
+            Console.WriteLine("Dados da Pessoa Fisica:");  
+            HerancaFisica();
+            Console.WriteLine("=======================================================================");
+            //Aqui vamos chamar o metodo HerancaFuncionario
+            Console.WriteLine("Dados do Funcionario:");
+            HerancaFuncionario();
+            Console.WriteLine("=======================================================================");
         }
+
+        //Vamos criar o mentodo Privado sobre a aula Herança
+        private static void HerancaFisica()
+        {
+            var PessoaFisica = new Cadastro.PessoaFisica();
+            PessoaFisica.Id = 1;
+            PessoaFisica.Nome = "João";
+            PessoaFisica.CPF = "12345612";
+            PessoaFisica.ImprimirDados();
+            PessoaFisica.ImprimirCpf();
+        }
+
+        private static void HerancaFuncionario()
+        {
+            //Criando objeto da classe Funcionario e atribuindo valores
+            var Funcionario = new Cadastro.Funcionario();
+            Funcionario.Id = 2;
+            Funcionario.Nome = "Pedro";
+            Funcionario.CPF = "42224612";
+            Funcionario.Matricula = "1020";
+            //funções de impressão
+            Funcionario.ImprimirDados();
+            Funcionario.ImprimirCpf();
+            Funcionario.ImprimirMatricula();
+        }   
     }
 }
