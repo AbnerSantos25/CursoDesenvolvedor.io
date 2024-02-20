@@ -7,6 +7,8 @@ namespace Application
     {
         static void Main(string[] args)
         {
+            ClasseSelada();
+            Console.WriteLine("=======================================================================");
             // Console.WriteLine("Cadastro de Produtos, Digite o nome do Produto: ");
             // var NomeProduto = Console.ReadLine();
             // var produto = new Cadastro.Produto();
@@ -26,7 +28,7 @@ namespace Application
             // Console.Clear();
             // produto.ImprimirInformacao();
             // QuantidadeEmEstoque();
-
+            Console.WriteLine("=======================================================================");
             //Aqui vamos chamar o metodo Heranca
             Console.WriteLine("=======================================================================");
             Console.WriteLine("Dados da Pessoa Fisica:");  
@@ -36,6 +38,7 @@ namespace Application
             Console.WriteLine("Dados do Funcionario:");
             HerancaFuncionario();
             Console.WriteLine("=======================================================================");
+            ClasseAbstractAnimal();
         }
 
         //Vamos criar o mentodo Privado sobre a aula Herança
@@ -61,9 +64,10 @@ namespace Application
             Funcionario.ImprimirDados();
             Funcionario.ImprimirCpf();
             Funcionario.ImprimirMatricula();
+            
         }   
 
-        //Criando um metodo para a classe Configuracao
+        //Criando um metodo para a classe selada Configuracao 
         private static void ClasseSelada()
         {
             //Ha dois metodos para atribuir valores a variavel Host
@@ -75,8 +79,16 @@ namespace Application
                 {
                     Host = "localhost"
                 };
-                
+
             Console.WriteLine("Host: " + configuracao2.Host);
+        }
+
+        //Criando um metodo para a classe abstract Animal.
+        private static void ClasseAbstractAnimal()
+        {   
+            var cachorro = new Cadastro.Cachorro();
+            cachorro.Nome = "Rex";
+            cachorro.ImprimirDados();
         }
     }
 }

@@ -78,9 +78,32 @@ namespace Cadastro
         }
     }
 
-    //Classes Seladas(Sealed).
+    //Classes Seladas(Sealed - Essa tipo de classe não deixa outras classes herdar dela)
     public sealed class Configuracao
     {
         public string Host {get; set;}
     }
+
+    //Classes Abstratas (não é possivel instanciar ela)
+    public abstract class Animal
+    {
+        public string Nome {get; set;}
+
+        public abstract string GetInformacoes();
+
+        public void ImprimirDados()
+        {
+            Console.WriteLine("Nome do Animal: " + Nome);
+            Console.WriteLine(GetInformacoes());
+        }
+    }
+
+    public class Cachorro : Animal
+    {
+        public override string GetInformacoes()
+        {
+            return "Cachorro é um bom amigo";
+        }
+    }
+    
 }
