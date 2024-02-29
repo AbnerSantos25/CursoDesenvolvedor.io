@@ -29,16 +29,25 @@ namespace Application
             // produto.ImprimirInformacao();
             // QuantidadeEmEstoque();
             Console.WriteLine("=======================================================================");
+            Console.WriteLine("Dados da Pessoa Fisica:");
             //Aqui vamos chamar o metodo Heranca
-            Console.WriteLine("=======================================================================");
-            Console.WriteLine("Dados da Pessoa Fisica:");  
             HerancaFisica();
+
             Console.WriteLine("=======================================================================");
             //Aqui vamos chamar o metodo HerancaFuncionario
             Console.WriteLine("Dados do Funcionario:");
             HerancaFuncionario();
+
             Console.WriteLine("=======================================================================");
             ClasseAbstractAnimal();
+
+            Console.WriteLine("=======================================================================");
+            AulaRecordCurso();
+
+            Console.WriteLine("=======================================================================");
+            AulaInterfaceProduto();
+
+            Console.WriteLine("=======================================================================");
         }
 
         //Vamos criar o mentodo Privado sobre a aula Herança
@@ -89,6 +98,31 @@ namespace Application
             var cachorro = new Cadastro.Cachorro();
             cachorro.Nome = "Rex";
             cachorro.ImprimirDados();
+        }
+
+        //Criando um metodo para a aula de Record
+        private static void AulaRecordCurso()
+        {
+            var curso1 = new Cadastro.Curso { Id = 1, Descricao = "Curso" };
+            var curso2 = new Cadastro.Curso { Id = 1, Descricao = "Curso" };
+            var curso3 = new Cadastro.Curso(); // demostração onde não usamos o Record
+            var curso4 = new Cadastro.Curso(); // demostração onde usaremos o Record
+            //Console.WriteLine(curso1.Equals(curso2));//jeito certo de comparar
+            Console.WriteLine(curso1 == curso2);//jeito errado de comparar
+
+            curso3 = curso1;
+            curso3.Id = 2; /*Aqui estamos mudando o valor do id do curso3, mas o curso1 tambem vai mudar,
+            porque curso3 é uma referencia(ponteiro) para curso1*/
+
+            curso3 = curso3 with { Id = 3 }; //Aqui estamos mudando apenas o valor do id do curso3, mas o curso1 não vai mudar
+        }
+
+        //Criando um metodo para a aula de Interface
+        private static void AulaInterfaceProduto()
+        {
+            var Computador = new Cadastro.Computador();
+            Computador.Nome = "Dell";
+            Computador.Impirmir();
         }
     }
 }
