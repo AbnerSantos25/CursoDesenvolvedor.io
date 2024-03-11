@@ -7,13 +7,12 @@ namespace Application
     {
         static void Main(string[] args)
         {
-            ClasseSelada();
-            Console.WriteLine("=======================================================================");
+
             // Console.WriteLine("Cadastro de Produtos, Digite o nome do Produto: ");
             // var NomeProduto = Console.ReadLine();
             // var produto = new Cadastro.Produto();
             // produto.Nome = NomeProduto;
- 
+
             //Lendo o id do produto fornecido pelo usuario.
             // Console.Write("Digite o id do produto: ");
             // int id = int.Parse(Console.ReadLine());
@@ -28,25 +27,34 @@ namespace Application
             // Console.Clear();
             // produto.ImprimirInformacao();
             // QuantidadeEmEstoque();
-            Console.WriteLine("=======================================================================");
-            Console.WriteLine("Dados da Pessoa Fisica:");
+
+            // ------------ //
+
+            //Console.WriteLine("=======================================================================");
+            //Console.WriteLine("Dados da Pessoa Fisica:");
             //Aqui vamos chamar o metodo Heranca
-            HerancaFisica();
+            //HerancaFisica();
 
-            Console.WriteLine("=======================================================================");
+            //Console.WriteLine("=======================================================================");
             //Aqui vamos chamar o metodo HerancaFuncionario
-            Console.WriteLine("Dados do Funcionario:");
-            HerancaFuncionario();
+            //Console.WriteLine("Dados do Funcionario:");
+            //HerancaFuncionario();
 
-            Console.WriteLine("=======================================================================");
-            ClasseAbstractAnimal();
+            //Console.WriteLine("=======================================================================");
+            //ClasseSelada();
 
-            Console.WriteLine("=======================================================================");
-            AulaRecordCurso();
+            //Console.WriteLine("=======================================================================");
+            //ClasseAbstractAnimal();
 
-            Console.WriteLine("=======================================================================");
-            AulaInterfaceProduto();
+            //Console.WriteLine("=======================================================================");
+            //AulaRecordCurso();
 
+            //Console.WriteLine("=======================================================================");
+            //AulaInterfaceProduto();
+
+            //Console.WriteLine("=======================================================================");
+
+            Conversores();
             Console.WriteLine("=======================================================================");
         }
 
@@ -123,6 +131,14 @@ namespace Application
             var Computador = new Cadastro.Computador();
             Computador.Nome = "Dell";
             Computador.Impirmir();
+        }
+
+        //Criando um metodo para a aula de Conversores
+        public static void Conversores()
+        {
+            var Conversores = new Conversores.Conversor();
+            // Conversores.ConversorAndParse();
+            Conversores.AulaTryParse();
         }
     }
 }
