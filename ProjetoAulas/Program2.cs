@@ -1,4 +1,5 @@
 
+using Modulo10;
 using System;
 
 namespace Application
@@ -54,11 +55,16 @@ namespace Application
 
             //Console.WriteLine("=======================================================================");
 
-            Conversores();
-            Console.WriteLine("=======================================================================");
+            //Console.WriteLine("=======================================================================");
+            //TrabalhandoComStrings();
+
+            TrabalhandoComDatas();
+
         }
 
-        //Vamos criar o mentodo Privado sobre a aula Herança
+        /// <summary>
+        /// Vamos criar o mentodo Privado sobre a aula Herança
+        /// </summary>
         private static void HerancaFisica()
         {
             var PessoaFisica = new Cadastro.PessoaFisica();
@@ -84,7 +90,9 @@ namespace Application
             
         }   
 
-        //Criando um metodo para a classe selada Configuracao 
+        /// <summary>
+        /// Criando um metodo para a classe selada Configuracao 
+        /// </summary>
         private static void ClasseSelada()
         {
             //Ha dois metodos para atribuir valores a variavel Host
@@ -100,7 +108,9 @@ namespace Application
             Console.WriteLine("Host: " + configuracao2.Host);
         }
 
-        //Criando um metodo para a classe abstract Animal.
+        /// <summary>
+        /// Criando um metodo para a classe abstract Animal.
+        /// </summary>
         private static void ClasseAbstractAnimal()
         {   
             var cachorro = new Cadastro.Cachorro();
@@ -108,7 +118,9 @@ namespace Application
             cachorro.ImprimirDados();
         }
 
-        //Criando um metodo para a aula de Record
+        /// <summary>
+        /// Criando um metodo para a aula de Record
+        /// </summary>
         private static void AulaRecordCurso()
         {
             var curso1 = new Cadastro.Curso { Id = 1, Descricao = "Curso" };
@@ -125,7 +137,9 @@ namespace Application
             curso3 = curso3 with { Id = 3 }; //Aqui estamos mudando apenas o valor do id do curso3, mas o curso1 não vai mudar
         }
 
-        //Criando um metodo para a aula de Interface
+        /// <summary>
+        /// Criando um metodo para a aula de Interface
+        /// </summary>
         private static void AulaInterfaceProduto()
         {
             var Computador = new Cadastro.Computador();
@@ -133,12 +147,35 @@ namespace Application
             Computador.Impirmir();
         }
 
-        //Criando um metodo para a aula de Conversores
-        public static void Conversores()
+        /// <summary>
+        /// Neste metodo estamos trabalhando com strings, assim podendo transformar todas as letras em minusculas ou maiusculas.
+        /// </summary>
+        public static void TrabalhandoComStrings()
         {
-            var Conversores = new Conversores.Conversor();
-            // Conversores.ConversorAndParse();
-            Conversores.AulaTryParse();
+            var trabalhandoComStrings = new Modulo10.TrabalhandoComStrings();
+            //trabalhandoComStrings.ConverterParaLetrasMinusculas();
+            //trabalhandoComStrings.ConverterParaLetrasMaiusculas();
+            //trabalhandoComStrings.AulaSubstring();
+            //trabalhandoComStrings.AulaRange();
+            //trabalhandoComStrings.AulaContains();
+            //trabalhandoComStrings.AulaThim();
+            //trabalhandoComStrings.AulaStartWitheEndswith();
+            //trabalhandoComStrings.AulaReplace();
+            //trabalhandoComStrings.AulaLength();
         }
+
+        public static void TrabalhandoComDatas()
+        {
+            var trabalhandoComDatas = new Modulo11.TrabalhandoComDatas();
+            //trabalhandoComDatas.AulaDateTime();
+            //trabalhandoComDatas.AulaSubtraindoDatas();
+            //trabalhandoComDatas.AulaAdicionadoDiasMesesAnos();
+            //trabalhandoComDatas.AulaAdicionadoHorasMinutosSegundos();
+            //trabalhandoComDatas.AulaDiaDaSemana();
+            //trabalhandoComDatas.AulaDateOnly();
+            trabalhandoComDatas.AulaTimeOnly();
+        }
+
+
     }
 }
