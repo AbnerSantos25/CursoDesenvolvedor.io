@@ -58,7 +58,12 @@ namespace Application
             //Console.WriteLine("=======================================================================");
             //TrabalhandoComStrings();
 
-            TrabalhandoComDatas();
+            //TrabalhandoComDatas();
+
+            //TrabalhandoComExcecoes();
+            //TrabalhandoComArquivos();
+
+            TrabalhandoComLinq();
 
         }
 
@@ -176,6 +181,29 @@ namespace Application
             trabalhandoComDatas.AulaTimeOnly();
         }
 
+        private static void TrabalhandoComExcecoes()
+        {
+            var trabalhandoComExcecoes = new Modulo12.TrabalhandoComExcecoes();
+            trabalhandoComExcecoes.AulaTratandoException();
+        }
+        private static void TrabalhandoComArquivos()
+        {
+            var trabalhandoComArquivos = new Modulo13.TrabalhandoComArquivos();
+            //trabalhandoComArquivos.AulaCriandoArquivo();
+            //trabalhandoComArquivos.AulaLendoAequivo();
+            trabalhandoComArquivos.AulaExcluindoArquivo();
+        }
+
+        //trabalhando com linq
+        private static void TrabalhandoComLinq()
+        { 
+            var linq = new Modulo14.TrabalhandoComLinq();
+            //linq.AulaWhere();
+            //linq.AulaOrdenacao();
+            //linq.AulaTake();
+            //linq.AulaCount();
+            linq.AulaFirstEFirstOrDefault();
+        }
 
     }
 }

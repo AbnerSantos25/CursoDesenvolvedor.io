@@ -27,18 +27,18 @@ public class TrabalhandoComStrings
         var linha = Console.ReadLine();
         Console.WriteLine(linha.Substring(0, 10)); // Capturando os 10 primeiros caracteres, caso querira iniciar a partir de algum campo, mudar o primeiro parametro.
     }
-    public void AulaRange()
+    public void AulaRange() 
     {
         string nomeArquivo = "imagem.png";
-        string extensao = nomeArquivo[^3..] ;
-        string nome = nomeArquivo[..^4];
+        string extensao = nomeArquivo[^3..]; //captura os 3 ultimos caracteres
+        string nome = nomeArquivo[..^4]; //captura todos os caracteres menos os 4 ultimos
         Console.WriteLine(nome);
         Console.WriteLine(extensao);
     }
     public void AulaContains()
     {
         var linha = "teste de contain com strings";
-        if (linha.Contains("string"))
+        if (linha.Contains("string"))//o contains verifica se a palavra existe na string
         {
             Console.WriteLine($"A palavra foi encontrada");
         }
@@ -61,7 +61,7 @@ public class TrabalhandoComStrings
         Console.WriteLine(curso.StartsWith("Curso"));//Verifica se a string começa com a palavra Curso
         Console.WriteLine(curso.EndsWith("C#"));//Verifica se a string termina com a palavra C#
     }
-    public void AulaReplace()
+    public void AulaReplace() // substitui uma palavra por outra dentro da string
     {
         string teste =  "Curso de C#";
         Console.WriteLine(teste);
